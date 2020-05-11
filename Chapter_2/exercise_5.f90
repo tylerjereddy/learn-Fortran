@@ -5,6 +5,7 @@
           real, dimension(10,10)      :: d
           real, dimension(5, 9)       :: e
           real, dimension(5, 0:1, 4)  :: f
+          integer, dimension(11)      :: g
 
           ! first, 10th, 11th, and last elements:
           write(*, *) "a(1):", a(1)
@@ -71,6 +72,9 @@
           write(*, *) "f(2,0,2):", f(2,0,2)
           ! last element exhausts all dims
           write(*, *) "f(5,1,4):", f(5,1,4)
+
+          ! check the first element of g:
+          write(*, *) "g(1):", g(1)
 
 
 
