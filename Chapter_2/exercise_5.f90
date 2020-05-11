@@ -3,6 +3,7 @@
           real, dimension(0:11)       :: b
           real, dimension(-11:0)      :: c
           real, dimension(10,10)      :: d
+          real, dimension(5, 9)       :: e
 
           ! first, 10th, 11th, and last elements:
           write(*, *) "a(1):", a(1)
@@ -43,6 +44,19 @@
           ! the last element is the 10th row
           ! of the 10th column
           write(*, *) "d(10,10):", d(10,10)
+
+          ! e starts at (1,1)
+          write(*, *) "e(1,1):", e(1,1)
+          ! the 10th element of e is the 5th
+          ! row of the second column
+          write(*, *) "e(5,2):", e(5,2)
+          ! the 11th element of e is the first row
+          ! of the 3rd column
+          write(*, *) "e(1,3):", e(1,3)
+          ! the last element of e is the 5th row
+          ! of the 9th column
+          write(*, *) "e(5,9):", e(5,9)
+
 
       end subroutine array_work
 
