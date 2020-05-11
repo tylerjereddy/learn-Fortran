@@ -4,6 +4,7 @@
           real, dimension(-11:0)      :: c
           real, dimension(10,10)      :: d
           real, dimension(5, 9)       :: e
+          real, dimension(5, 0:1, 4)  :: f
 
           ! first, 10th, 11th, and last elements:
           write(*, *) "a(1):", a(1)
@@ -56,6 +57,21 @@
           ! the last element of e is the 5th row
           ! of the 9th column
           write(*, *) "e(5,9):", e(5,9)
+
+          ! f starts at the first column of the
+          ! first row of the first row
+          write(*, *) "f(1,0,1):", f(1,0,1)
+          ! the 10th element of f is f(2, 1, 1)--the
+          ! first column of the second row of the second
+          ! row
+          write(*, *) "f(2,1,1):", f(2,1,1)
+          ! the 11th element of f is f(2, 0, 2)--the
+          ! second column of the first row of the second
+          ! row
+          write(*, *) "f(2,0,2):", f(2,0,2)
+          ! last element exhausts all dims
+          write(*, *) "f(5,1,4):", f(5,1,4)
+
 
 
       end subroutine array_work
