@@ -17,9 +17,17 @@
                real, dimension(3) :: center
            end type circle
 
+           type book
+               character(len=20) :: title
+               character(len=20) :: author_first_name
+               character(len=20) :: author_last_name
+               integer :: num_pages
+           end type book
+
           real, dimension(3) :: my_center
           type(vehicle_registration) :: tyler_registration
           type(circle) :: my_circle
+          type(book) :: my_book
 
           ! exercise the derived types from above
           tyler_registration = vehicle_registration('blue', &
@@ -46,7 +54,15 @@
                        "radius:", my_circle%radius, &
                        "center:", my_circle%center
 
-
+           my_book = book("Interesting Book", &
+                          "Tyler", &
+                          "Reddy", &
+                          557)
+           write(*, *) "Components of Tyler's book:", &
+                       "Title:", my_book%title, &
+                       "Author name:", my_book%author_first_name, &
+                                       my_book%author_last_name, &
+                       "Number of pages:", my_book%num_pages  
 
       end subroutine learning_derived_types
 
