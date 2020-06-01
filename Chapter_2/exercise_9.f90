@@ -6,9 +6,12 @@
           ! a real variable with a minimum of 12 decimal digits and
           ! of precision and range of 10**-100 to 10**100
           integer, parameter :: long = selected_real_kind(12, 100)
+          ! a Kanji character variable on a processor that supports
+          ! Kanji with kind=2
 
           write(*, *) "part a) integer range:", range(-17_k20)
           write(*, *) "part b) real range:", range(1.7_long)
+          !write(*, *) "part c) Kanji char constant:", 2_'々々'
 
       end subroutine entity_specifications
 
